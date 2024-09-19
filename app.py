@@ -301,7 +301,7 @@ def fetch_reviews():
         return jsonify({"error": "An error occurred while fetching reviews."}), 
 
 @app.route('/api/get-appstore-reviews', methods=['GET'])
-def get_reviews():
+def get_appstore_reviews():
     url = request.args.get('url')
     num_reviews = request.args.get('num_reviews', default=20, type=int)
 
